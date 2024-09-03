@@ -1,0 +1,52 @@
+@import './Styles.module.scss';
+
+.Account {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  .AccountButton {
+    @extend .SecondaryButton;
+  }
+}
+
+.Details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .DatePicker {
+    input {
+      color: black;
+      font-size: calc(5px + 2vmin);
+    }
+
+    Button {
+      background-color: transparent;
+      color: darkblue;
+      right: 10px;
+    }
+
+    label {
+      font-size: calc(5px + 2vmin);
+    }
+
+    background-color: #E2E9F0;
+    font-size: calc(5px + 2vmin);
+    border-radius: 10px;
+    margin: 5px;
+    width: 100%;
+  }
+}
+
+.PrimaryButton {
+  @extend .PrimaryButton;
+  align-self: flex-end;
+}
+
+.ErrorLabel {
+  @extend .Typography;
+  align-self: flex-end;
+  color: pink;
+}

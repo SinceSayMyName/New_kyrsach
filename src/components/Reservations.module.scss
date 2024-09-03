@@ -1,0 +1,54 @@
+@import './Styles.module.scss';
+
+.FullScreen {
+    @extend .FullScreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .InnerComponent {
+        margin-top: 10vh;
+
+        .OptionHeader {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .Scroll {
+            overflow-y: scroll;
+            height: 90vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .SecondaryButton {
+            @extend .SecondaryButton;
+            width: 300px;
+        }
+
+        .Typography {
+            padding-top: 20px;
+        }
+
+        .PrimaryButton {
+            @extend .PrimaryButton;
+            align-self: flex-end;
+            margin-left: 20px;
+        }
+
+        .ErrorText {
+            @extend .Typography;
+            color: pink;
+        }
+
+        .AcceptedText {
+            @extend .Typography;
+            color: aliceblue;
+        }
+    }
+}

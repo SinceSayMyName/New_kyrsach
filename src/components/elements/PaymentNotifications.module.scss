@@ -1,0 +1,41 @@
+@import '../Styles.module.scss';
+
+
+.FullScreen {
+    @extend .FullScreen;
+    justify-content: flex-start;
+
+    .InnerComponent {
+        margin-top: 10vh;
+        width: 100vw;
+        height: 90vh;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .Notification {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            background: aliceblue;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            width: 60%;
+
+            .PrimaryButton {
+                @extend .PrimaryButton;
+            }
+
+            .Typography {
+                @extend .Typography;
+                color: black;
+                text-shadow: none;
+                padding: 10px;
+            }
+        }
+    }
+}

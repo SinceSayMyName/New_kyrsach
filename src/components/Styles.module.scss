@@ -1,0 +1,79 @@
+.FullScreen {
+  height: 100vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .PrimaryButton {
+    @extend .PrimaryButton;
+
+    &:hover {
+      background-color: navy;
+    }
+  }
+
+  .TextButton {
+    @extend .TextButton;
+  }
+}
+
+.PrimaryButton {
+  color: aliceblue;
+  background-color: darkblue;
+  min-width: 200px;
+  width: fit-content;
+  font-size: 2vmin;
+  padding: 10px;
+  box-shadow: black 1px 0 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &:disabled {
+    background-color: grey;
+  }
+}
+
+.SecondaryButton {
+  color: darkblue;
+  background-color: aliceblue;
+  font-size: calc(7px + 1vmin);
+  font-weight: 550;
+  margin: 10px;
+  opacity: 0.9;
+
+  &:hover {
+    background-color: #E2E9F0;
+  }
+}
+
+.TextButton {
+  text-shadow: black 1px 0 10px;
+  color: aliceblue;
+
+  &:hover {
+    color: cornflowerblue;
+  }
+}
+
+.Typography {
+  text-shadow: black 1px 0 10px;
+  color: aliceblue;
+}
+
+.TextField {
+  input {
+    color: black;
+    font-size: calc(5px + 2vmin);
+  }
+
+  label {
+    font-size: calc(5px + 2vmin);
+  }
+
+  margin: 5px !important;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 100%;
+}

@@ -1,0 +1,33 @@
+.Rectangle {
+    background-color: black;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .BackButton {
+        color: black;
+        background-color: aliceblue;
+        font-size: calc(7px + 1vmin);
+        font-weight: 550;
+        width: 150px;
+        opacity: 0.9;
+        margin-left: 20px;
+
+        &:hover {
+            background-color: #E2E9F0;
+        }
+    }
+
+    .HeaderText {
+        text-shadow: black 1px 0 10px;
+        color: aliceblue;
+        text-align: end;
+        margin-left: 50px;
+    }
+}

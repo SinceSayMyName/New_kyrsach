@@ -1,0 +1,26 @@
+@import './Styles.module.scss';
+
+.FullScreen {
+    @extend .FullScreen;
+    justify-content: flex-start;
+
+    .InnerComponent {
+        margin-top: 10vh;
+        width: 100vw;
+        height: 82vh;
+
+        .Scroll {
+            overflow-y: scroll;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .SecondaryButton {
+            @extend .SecondaryButton;
+            width: 300px;
+        }
+    }
+}

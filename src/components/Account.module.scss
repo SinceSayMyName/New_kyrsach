@@ -1,0 +1,93 @@
+@import './Styles.module.scss';
+
+.FullScreen {
+    @extend .FullScreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .InnerComponent {
+        margin-top: 10vh;
+
+        .ButtonContainer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .SignOutButton {
+                @extend .PrimaryButton;
+                margin: 10px;
+            }
+        }
+
+        .Scroll {
+            overflow-y: scroll;
+            height: 90vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .InformationHolder {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: black 1px 0 5px;
+            width: 100%;
+            margin: 10px;
+            padding: 20px;
+
+
+            .HeaderRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .Header {
+                    color: black;
+                    margin: calc(7.5px + 1vmin);
+                    width: 300px;
+                }
+
+                .HeaderButton {
+                    @extend .PrimaryButton;
+                    justify-self: flex-start;
+                    margin-right: 5px;
+                }
+            }
+
+            .InformationRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .Name {
+                    color: black;
+                    margin: calc(7.5px + 1vmin);
+                    text-align: start;
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+.TextField {
+    @extend .TextField;
+
+    input {
+        padding: 10px !important;
+    }
+}
+
+.ErrorLabel {
+    @extend .Typography;
+    color: pink;
+}

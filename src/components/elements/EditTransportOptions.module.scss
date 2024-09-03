@@ -1,0 +1,143 @@
+@import '../Styles.module.scss';
+
+.Separator {
+    display: flex;
+    direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 12vh;
+    right: 0px;
+    width: 100vw;
+    height: 88vh;
+
+    .OptionsList {
+        overflow-y: scroll;
+        height: 100%;
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+
+        .OptionRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .ButtonsColumn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                svg {
+                    color: aliceblue;
+                    width: 40px;
+                    height: 40px;
+                    filter: drop-shadow(3px 5px 4px black);
+                }
+            }
+
+
+            .Option {
+                width: 30vw;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
+    .OptionEdit {
+        height: 100%;
+        width: 39%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .PrimaryButton {
+            @extend .PrimaryButton;
+        }
+
+        .Typography {
+            color: aliceblue;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .Autocomplete {
+            width: 100%;
+            margin: 5px;
+
+            .TextField {
+                @extend .TextFieldSmaller;
+            }
+        }
+
+        .PrimaryButton {
+            align-self: flex-end;
+        }
+
+        .RowData {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            margin: 5px;
+            gap: 10px;
+
+            .CloseIcon {
+                color: aliceblue;
+                width: 40px;
+                height: 40px;
+                filter: drop-shadow(3px 5px 4px black);
+            }
+
+            .DatePicker {
+                width: 100%;
+
+                input {
+                    color: black;
+                    font-size: calc(2px + 2vmin);
+                }
+
+                Button {
+                    background-color: transparent;
+                    color: darkblue;
+                    right: 10px;
+                }
+
+                label {
+                    font-size: calc(5px + 2vmin);
+                }
+
+                background-color: #E2E9F0;
+                font-size: calc(2px + 2vmin);
+                border-radius: 10px;
+            }
+
+            .TextField {
+                @extend .TextFieldSmaller;
+            }
+
+            .Autocomplete {
+                width: 100%;
+                margin: 0px;
+
+                .TextField {
+                    @extend .TextFieldSmaller;
+                }
+            }
+        }
+    }
+}
+
+.TextFieldSmaller {
+    @extend .TextField;
+    margin: 0px !important;
+
+    input {
+        font-size: calc(2px + 2vmin);
+    }
+
+    label {
+        font-size: calc(2px + 2vmin);
+    }
+}

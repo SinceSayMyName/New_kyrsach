@@ -1,0 +1,41 @@
+@import './Styles.module.scss';
+
+
+.Window {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: black 1px 0 5px;
+    margin: 10px;
+    padding: 20px;
+
+    .PrimaryButton {
+        @extend .PrimaryButton;
+        align-self: center !important;
+        margin: 10px;
+    }
+
+    .Typography {
+        @extend .Typography;
+        color: black;
+        text-shadow: none;
+        margin: 10px;
+    }
+
+    .Separator {
+        height: 10px;
+    }
+
+    .OptionRow {
+        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .Label {
+            color: black;
+            margin: calc(7.5px + 1vmin);
+            text-align: end;
+            width: 500px;
+        }
+    }
+}
